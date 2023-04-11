@@ -10,19 +10,19 @@ function Home() {
     {
       id: 1,
       nume: "Flore",
-      score: 10,
+      score: 0,
     },
 
     {
       id: 2,
       nume: "Bogdan",
-      score: 115,
+      score: 0,
     },
 
     {
       id: 3,
       nume: "Marian",
-      score: 162,
+      score: 2,
     },
 
     {
@@ -75,13 +75,8 @@ function removePlayer(playerRemoved:Player){
 
 function handlePoints(id: number, addToScore: number) {
     let auxPlayers = [...players];
-
-    for (let i = 0; i < players.length; i++) {
-      if (auxPlayers[i].id === id) {
-        auxPlayers[i].score += addToScore;
-      }
-    }
-
+    let aux =    auxPlayers.filter((player)=>player.id===id)
+    aux[0].score+=addToScore;
     setPlayers(auxPlayers);
 }
 

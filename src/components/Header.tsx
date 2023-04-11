@@ -39,7 +39,7 @@ const Header:React.FC<HeaderProps>=({players})=>{
       <div className="title">
         <h3 className="title-scoreboard">SCOREBOARD</h3>
        </div> 
-      <Stopwatch/>
+      <Stopwatch start={false} reset={false}/>
       </div>
   )
 }
